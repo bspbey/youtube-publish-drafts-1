@@ -316,6 +316,11 @@
             await dialog.moveToBottom();
             await sleep(1000);
             index += 1;
+        schedule.every().day.at('12:00').do(job)
+
+        while True:
+        schedule.run_pending()
+        time.sleep(1)
         }
 
     }
